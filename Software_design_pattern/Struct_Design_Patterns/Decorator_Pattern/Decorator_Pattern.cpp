@@ -3,8 +3,8 @@
 //装饰器模式（Decorator Pattern）允许向⼀个现有的对象添加新的功能，同时⼜不改变其结构。
 //这种类型的设计模式属于结构型模式，它是作为现有的类的⼀个包装。
 //代码没有改变 Car 类的内部结构，还为其增加了新的功能，这就是装饰器模式的作⽤。
+// 抽象构件类 具体构建类 抽象修饰类 具体修饰类
 
-#include "Decorator_Pattern.h"
 #include <iostream>
 #include <list>
 #include <memory>

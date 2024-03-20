@@ -1,6 +1,5 @@
 //
-// Created by 27464 on 2024/3/14.
-//懒汉/饱汉模式（线程安全需要加锁）：
+//饱汉模式（线程安全需要加锁）：
 //尽可能的晚的创建这个对象的实例，即在单例类第⼀次被引⽤的时候就将⾃⼰初始化，C++
 //很多地⽅都有类型的思想，⽐如写时拷⻉，晚绑定等
 
@@ -15,7 +14,7 @@ public:
         if (ins == nullptr) {
             pthread_mutex_lock(&mutex);
             if (ins == nullptr) {
-                ins = new SingleInstance();
+                ins = new SingleInstance();//ins 是静态的，只要创建一次就可以永久获取
             }
             pthread_mutex_unlock(&mutex);
         }
@@ -38,6 +37,7 @@ private:
 SingleInstance* SingleInstance::ins = nullptr;
 pthread_mutex_t SingleInstance::mutex;
 int main(){
+    system("chcp 65001");
     //因为不能创建对象所以通过静态成员函数的⽅法返回静态成员变ᰁ
     SingleInstance* ins = SingleInstance::GetInstance();
     delete ins;

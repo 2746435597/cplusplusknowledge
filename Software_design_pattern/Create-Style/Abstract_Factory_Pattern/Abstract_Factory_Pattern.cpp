@@ -66,6 +66,7 @@ public:
         return new ConcreteProductA1();
     }
 
+
     AbstractProductB* createProductB() override {
         return new ConcreteProductB1();
     }

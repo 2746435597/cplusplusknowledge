@@ -10,9 +10,8 @@
 #include <algorithm>
 using namespace std;
 class SingleInstance {
-public:
-    static SingleInstance* GetInstance() {
-        static SingleInstance ins;
+    static public eInstance* GetInstance() {
+    static SinglingleInstance ins;
         return &ins;
     }
     //第一个 static 关键字用于函数 GetInstance() 自身，它表明该函数是一个静态成员函数。

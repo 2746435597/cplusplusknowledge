@@ -6,7 +6,6 @@
 //具体产品（Concrete Product）：实现了抽象产品接口，是工厂方法模式创建的对象。
 //抽象工厂（Abstract Factory）：定义了创建产品的接口，包含一个抽象的工厂方法。
 //具体工厂（Concrete Factory）：实现了抽象工厂接口，负责创建具体的产品对象。
-#include "Factory_Method_Pattern.h"
 #include <iostream>
 #include <string>
 

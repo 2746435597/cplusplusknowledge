@@ -1,0 +1,18 @@
+重载（overloading）、重写（overriding）和隐藏（hiding）
+隐藏（Hiding）：指派生类中定义了与基类的非虚函数同名的函数。
+当派生类中定义了与基类函数同名但不具有相同的函数签名时，基类的函数将被隐藏，无法被派生类的对象直接访问。
+隐藏是静态的绑定，编译器根据对象的类型来决定调用哪个函数。
+
+class Base {
+public:
+    void display() {
+        std::cout << "Base class" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display(int x) {
+        std::cout << "Derived class: " << x << std::endl;
+    }
+};

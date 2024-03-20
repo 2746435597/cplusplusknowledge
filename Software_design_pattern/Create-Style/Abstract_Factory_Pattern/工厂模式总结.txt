@@ -1,0 +1,4 @@
+AbstractFactory模式和 Factory模式的区别是初学（使用）设计模式时候的一个容易引起困惑的地方。
+实际上，AbstractFactory模式是为创建一组（有多类）相关或依赖的对象提供创建接口，
+而 Factory模式是为一类对象提供创建接口或延迟对象的创建到子类中实现。
+并且可以看到，AbstractFactory模式通常都是使用 Factory 模式实现。

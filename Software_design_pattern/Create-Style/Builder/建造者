@@ -1,0 +1,2 @@
+Builder 模式的关键是其中的 Director对象并不直接返回对象，而是通过一步步（BuildPartA，BuildPartB，BuildPartC）来一步步进行对象的创建。
+Builder 模式的示例代码中，BuildPart 的参数是通过客户程序员传入的，
